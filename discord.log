@@ -1,0 +1,211 @@
+[30;1m2023-02-09 10:31:21[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-09 10:31:22[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 2a39e6dd932a243437f42fe876b63e47).
+[30;1m2023-02-09 10:31:37[0m [31mERROR   [0m [35mdiscord.app_commands.tree[0m Ignoring exception in command tree
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1091, in wrapper
+    await self._call(interaction)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1127, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'import_accounts' not found[0m
+[30;1m2023-02-09 10:38:19[0m [31mERROR   [0m [35mdiscord.app_commands.tree[0m Ignoring exception in command tree
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1091, in wrapper
+    await self._call(interaction)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1127, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'import_accounts' not found[0m
+[30;1m2023-02-09 10:50:22[0m [31mERROR   [0m [35mdiscord.app_commands.tree[0m Ignoring exception in command 'finance'
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 861, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/cogs/Admin.py", line 161, in finance
+    embed.add_field(name="Profit", value=f"{round(profit['total'],2)} €", inline=False)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/interactions.py", line 769, in send_message
+    await adapter.create_interaction_response(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 218, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'finance' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction[0m
+ [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 600be71ba661ceca1c82c581afd2afa8).
+[30;1m2023-02-09 10:50:33[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-09 10:50:37[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 002f3442428725a1c8df942d8909e6df).
+[30;1m2023-02-09 10:50:45[0m [31mERROR   [0m [35mdiscord.app_commands.tree[0m Ignoring exception in command 'finance'
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 861, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/cogs/Admin.py", line 173, in finance
+    return await interaction.response.send_message(embeds=[embed, embed1])
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/interactions.py", line 769, in send_message
+    await adapter.create_interaction_response(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 220, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'finance' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.[0m
+[30;1m2023-02-09 10:55:02[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-09 10:55:03[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 0a364dad87ec936163e133cb5f4dc73b).
+[30;1m2023-02-09 10:55:26[0m [31mERROR   [0m [35mdiscord.app_commands.tree[0m Ignoring exception in command 'gen'
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 861, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/cogs/Admin.py", line 34, in gen
+    await interaction.response.send_message("Here are your accounts: \n" + "```" +  "\n".join(account_list) + "```")
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/interactions.py", line 769, in send_message
+    await adapter.create_interaction_response(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 220, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'gen' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.[0m
+[30;1m2023-02-09 10:56:11[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-09 10:56:12[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 5e672d26f0a36993ae7d99b6ae4ee597).
+[30;1m2023-02-09 10:56:21[0m [31mERROR   [0m [35mdiscord.app_commands.tree[0m Ignoring exception in command 'gen'
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 861, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/cogs/Admin.py", line 34, in gen
+    await interaction.response.send_message("Here are your accounts: \n" + "```" +  "\n".join(account_list) + "```")
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/interactions.py", line 769, in send_message
+    await adapter.create_interaction_response(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 220, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'gen' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.[0m
+[30;1m2023-02-09 10:58:01[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-09 10:58:02[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 252910a9d8286aec419402b0b4e32b89).
+[30;1m2023-02-09 10:58:27[0m [31mERROR   [0m [35mdiscord.app_commands.tree[0m Ignoring exception in command 'gen'
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 861, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/cogs/Admin.py", line 34, in gen
+    await interaction.response.send_message("Here are your accounts: \n" + "```" +  "\n".join(account_list) + "```")
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/interactions.py", line 769, in send_message
+    await adapter.create_interaction_response(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 220, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'gen' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.[0m
+[30;1m2023-02-09 11:05:46[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-09 11:05:47[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 4c3fe39b1f60fe7f0d1e0a98710c5f2c).
+[30;1m2023-02-09 11:06:04[0m [31mERROR   [0m [35mdiscord.app_commands.tree[0m Ignoring exception in command 'buy'
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 861, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/cogs/Shop.py", line 40, in buy
+    return await interaction.response.send_message("You already have a checkout session", ephemeral=True)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/interactions.py", line 769, in send_message
+    await adapter.create_interaction_response(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 220, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'buy' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.[0m
+[30;1m2023-02-09 11:06:37[0m [31mERROR   [0m [35mdiscord.app_commands.tree[0m Ignoring exception in command 'cancel_checkout'
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 861, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/cogs/Shop.py", line 83, in cancel_checkout
+    return await interaction.response.send_message("No pending checkout session", ephemeral=True)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/interactions.py", line 769, in send_message
+    await adapter.create_interaction_response(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 220, in request
+    raise HTTPException(response, data)
+discord.errors.HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'cancel_checkout' raised an exception: HTTPException: 400 Bad Request (error code: 40060): Interaction has already been acknowledged.[0m
+[30;1m2023-02-09 12:13:50[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-09 12:13:50[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: cfd2adcfe89769687db09e41248c9e96).
+[30;1m2023-02-09 12:23:54[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-09 12:23:55[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: b18951b9417294b96ee4ee684d957b11).
+[30;1m2023-02-09 12:28:43[0m [31mERROR   [0m [35mdiscord.app_commands.tree[0m Ignoring exception in command 'address'
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 861, in _do_call
+    return await self._callback(self.binding, interaction, **params)  # type: ignore
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/cogs/Shop.py", line 20, in address
+    await self.log(interaction.user, interaction.command.name)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/cogs/Shop.py", line 15, in log
+    await channel.send(f"```[{member}] -> [{action}]```")
+AttributeError: 'NoneType' object has no attribute 'send'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1242, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 887, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/commands.py", line 880, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'address' raised an exception: AttributeError: 'NoneType' object has no attribute 'send'[0m
+[30;1m2023-02-09 12:32:04[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-09 12:32:05[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 2908bfa04b18467b57ea6257b8471d8d).
