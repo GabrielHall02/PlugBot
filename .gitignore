@@ -2,3 +2,5 @@
 /__pycache__/
 /venv/
 /cogs/__pycache__/
+.env
+.DS_Store
