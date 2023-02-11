@@ -5,6 +5,7 @@ from discord import app_commands
 from mongo_controller import MongoController
 from binance_controller import BinanceController
 from datetime import datetime
+import os
 
 class Shop(commands.Cog):
     def __init__(self, client):
@@ -59,8 +60,60 @@ class Shop(commands.Cog):
                     # Check if date is correct
                     if datetime.fromtimestamp(int(BinanceController().get_deposit_by_txid("USDT", txid)['insertTime'])/1000) >= checkout_session['createdAt']:
                         # Send n_accounts
-                        await interaction.response.send_message("Sending {} accounts".format(checkout_session['number_of_accounts']))
-                        # TODO send accounts
+                        # Send accs in string if number_of_accounts is < 20
+                        number_of_accounts = checkout_session['number_of_accounts']
+                        client = checkout_session['user_id']
+                        payment_method = checkout_session['coin']
+                        total_price = checkout_session['total_price']
+                        account_list = [acc['account'] for acc in MongoController().get_n_available_accounts(number_of_accounts)]
+                        if len(account_list) != number_of_accounts:
+                            return await interaction.response.send_message("There are not enough accounts available.\n For further support ping a Moderator", ephemeral=True)
+                        if number_of_accounts < 20:
+                            await interaction.response.send_message("Here are your accounts: \n" + "```" +  "\n".join(account_list) + "```")
+                        else:
+                            # Send accs in file if number_of_accounts is >= 20
+                            with open("accounts.txt", "w") as f:
+                                f.write("Here are your accounts: \n" + "\n".join(account_list))
+                            await interaction.response.send_message(file=discord.File(fp="accounts.txt", filename="accounts.txt"))
+                            os.remove("accounts.txt")
+                        # Update accounts in database to status = sold
+                        for acc in account_list:
+                            MongoController().update_account_status(acc, "sold")
+                        # Create Finance statement
+                        finance_statement = {
+                            "Type": "Income",
+                            "Product": "Account",
+                            "Quantity": number_of_accounts,
+                            "Unit_price": round(total_price / number_of_accounts,2),
+                            "Total_Price": total_price,
+                            "Payment_Method": payment_method,
+                            "Client_id": client,
+                            "Date": datetime.now()
+                        }
+                        MongoController().insert_finance_statement(finance_statement)
+
+                        # Update client document
+                        # 1. Check if client exists
+                        if MongoController().get_client(client) is not None:
+                            # 2. Update client document
+                            purchase = {
+                                "Date": datetime.now(),
+                                "Number_of_accounts": number_of_accounts,
+                                "Total_price": total_price,
+                                "Payment_method": payment_method,
+                                "Account_list": account_list
+                            }
+                            MongoController().add_new_client_purchase(client, purchase)
+                        else:
+                            # 3. Create client document
+                            account_purchases = [{
+                                "Date": datetime.now(),
+                                "Number_of_accounts": number_of_accounts,
+                                "Total_price": total_price,
+                                "Payment_method": payment_method,
+                                "Account_list": account_list
+                            }]
+                            MongoController().insert_new_client(client.strip("<@>"), datetime.now(), 0, account_purchases, [], [], 0)
 
                         # Update checkout session status to completed
                         MongoController().set_session_status(checkout_session['_id'], "completed")
@@ -86,12 +139,12 @@ class Shop(commands.Cog):
 
 
 class SelectAddressInfoView(discord.ui.View):
-    def __init__(self, invoker=None, ):
+    def __init__(self, invoker=None):
         super().__init__(timeout=900)
         self.add_item(SelectAddressMenu(invoker))
 
 class SelectAddressView(discord.ui.View):
-    def __init__(self, invoker=None, ):
+    def __init__(self, invoker=None):
         super().__init__(timeout=900)
         self.add_item(SelectAddressMenu(invoker))
 

@@ -209,3 +209,655 @@ Traceback (most recent call last):
 discord.app_commands.errors.CommandInvokeError: Command 'address' raised an exception: AttributeError: 'NoneType' object has no attribute 'send'[0m
 [30;1m2023-02-09 12:32:04[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
 [30;1m2023-02-09 12:32:05[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 2908bfa04b18467b57ea6257b8471d8d).
+[30;1m2023-02-10 11:50:15[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-10 11:50:16[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: e57269b6f726f0fadd69deafe2d1281b).
+[30;1m2023-02-10 11:51:20[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-10 11:51:21[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 65b7639d20cdbd6819e55d56038544e2).
+[30;1m2023-02-10 11:59:10[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-10 11:59:11[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 03245f3aa8973f2f42c06c1ba1ea024e).
+[30;1m2023-02-10 12:07:42[0m [31mERROR   [0m [35mdiscord.ui.view[0m Ignoring exception in view <SelectNetworkView timeout=900 children=1> for item <SelectNetworkMenu placeholder='Chose a network' min_values=1 max_values=1 disabled=False options=[<SelectOption label='BSC' value='BSC' description='BNB Smart Chain (BEP20)' emoji=None default=False>, <SelectOption label='EOS' value='EOS' description='EOS' emoji=None default=False>, <SelectOption label='AVAXC' value='AVAXC' description='AVAX C-Chain' emoji=None default=False>, <SelectOption label='BNB' value='BNB' description='BNB Beacon Chain (BEP2)' emoji=None default=False>, <SelectOption label='ETH' value='ETH' description='Ethereum (ERC20)' emoji=None default=False>, <SelectOption label='MATIC' value='MATIC' description='Polygon' emoji=None default=False>, <SelectOption label='SOL' value='SOL' description='Solana' emoji=None default=False>, <SelectOption label='XTZ' value='XTZ' description='Tezos' emoji=None default=False>, <SelectOption label='TRX' value='TRX' description='Tron (TRC20)' emoji=None default=False>]>
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/ui/view.py", line 425, in _scheduled_task
+    await item.callback(interaction)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/cogs/Shop.py", line 174, in callback
+    return await interaction.response.send_message(f'**{revolut_address}**')
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/interactions.py", line 769, in send_message
+    await adapter.create_interaction_response(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 218, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction[0m
+[30;1m2023-02-10 12:09:40[0m [31mERROR   [0m [35mdiscord.ui.view[0m Ignoring exception in view <SelectNetworkView timeout=900 children=1> for item <SelectNetworkMenu placeholder='Chose a network' min_values=1 max_values=1 disabled=False options=[<SelectOption label='BSC' value='BSC' description='BNB Smart Chain (BEP20)' emoji=None default=False>, <SelectOption label='EOS' value='EOS' description='EOS' emoji=None default=False>, <SelectOption label='AVAXC' value='AVAXC' description='AVAX C-Chain' emoji=None default=False>, <SelectOption label='BNB' value='BNB' description='BNB Beacon Chain (BEP2)' emoji=None default=False>, <SelectOption label='ETH' value='ETH' description='Ethereum (ERC20)' emoji=None default=False>, <SelectOption label='MATIC' value='MATIC' description='Polygon' emoji=None default=False>, <SelectOption label='SOL' value='SOL' description='Solana' emoji=None default=False>, <SelectOption label='XTZ' value='XTZ' description='Tezos' emoji=None default=False>, <SelectOption label='TRX' value='TRX' description='Tron (TRC20)' emoji=None default=False>]>
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/ui/view.py", line 425, in _scheduled_task
+    await item.callback(interaction)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/cogs/Shop.py", line 174, in callback
+    return await interaction.response.send_message(f'**{revolut_address}**')
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/interactions.py", line 769, in send_message
+    await adapter.create_interaction_response(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/webhook/async_.py", line 218, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction[0m
+[30;1m2023-02-10 12:12:53[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has successfully RESUMED session 03245f3aa8973f2f42c06c1ba1ea024e.
+[30;1m2023-02-10 12:17:47[0m [34;1mINFO    [0m [35mdiscord.client[0m logging in using static token
+[30;1m2023-02-10 12:17:48[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 980d242e2d4d3cf3b649e5c9b13cd659).
+[30;1m2023-02-10 12:35:18[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-10 12:35:44[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 1b5341df66ace1b577b22e958a7164a3).
+[30;1m2023-02-10 12:55:02[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-10 12:55:08[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: bb8120223852d2012a2f96e99ae5afc5).
+[30;1m2023-02-10 14:28:44[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-10 14:28:49[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: f259f8f009f3af41e958bcc4f4577381).
+[30;1m2023-02-10 14:49:57[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 0.97s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 14:49:58[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 3.03s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 14:50:01[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 4.76s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 14:50:06[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 5.30s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 14:50:11[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 6.78s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 14:50:18[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 9.71s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 14:50:28[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 40.49s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 14:59:25[0m [31mERROR   [0m [35mdiscord.client[0m Ignoring exception in on_ready
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 980, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore[return-value]  # noqa
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1076, in create_connection
+    raise exceptions[0]
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 1060, in create_connection
+    sock = await self._connect_sock(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 969, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/selector_events.py", line 501, in sock_connect
+    return await fut
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/selector_events.py", line 509, in _sock_connect
+    sock.connect(address)
+OSError: [Errno 51] Network is unreachable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 409, in _run_event
+    await coro(*args, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/app.py", line 15, in on_ready
+    await self.tree.sync()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/app_commands/tree.py", line 1069, in sync
+    data = await self._http.bulk_upsert_global_commands(self.client.application_id, payload=payload)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 624, in request
+    async with self.__session.request(method, url, **kwargs) as response:
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 1141, in __aenter__
+    self._resp = await self._coro
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1206, in _create_direct_connection
+    raise last_exc
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1175, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 988, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host discord.com:443 ssl:default [Network is unreachable][0m
+[30;1m2023-02-10 15:01:56[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-10 15:02:01[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 70006882145b8c95c22475763438c990).
+[30;1m2023-02-10 15:21:20[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 162.16s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 15:24:04[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-10 15:24:10[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: df558b7a13152531a2a7f0b442b138e5).
+[30;1m2023-02-10 16:13:49[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-10 16:13:55[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 86eb6bcd926ea22c3435edf3d8a27009).
+[30;1m2023-02-10 17:28:51[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 0.68s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 17:28:51[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 3.20s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 17:28:54[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 7.27s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 17:45:42[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 11.91s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 18:02:02[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 31.21s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1152, in _create_direct_connection
+    hosts = await asyncio.shield(host_resolved)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 874, in _resolve_host
+    addrs = await self._resolver.resolve(host, port, family=self._family)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/resolver.py", line 33, in resolve
+    infos = await self._loop.getaddrinfo(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/base_events.py", line 863, in getaddrinfo
+    return await self.run_in_executor(
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 445, in wait_for
+    return fut.result()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/connector.py", line 1166, in _create_direct_connection
+    raise ClientConnectorError(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host gateway-us-east1-c.discord.gg:443 ssl:default [nodename nor servname provided, or not known][0m
+[30;1m2023-02-10 18:34:22[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-10 18:51:13[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-10 19:07:31[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-10 19:07:36[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: acd7b75d7a137d8e56cf717b4e4b43ad).
+[30;1m2023-02-10 20:47:52[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-10 22:27:26[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-10 22:27:32[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: a64d3cb1a20fa9dc612fe145e3eb57d1).
+[30;1m2023-02-10 23:30:40[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 01:33:27[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 51.98s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/http.py", line 536, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client.py", line 560, in _request
+    await resp.start(conn)
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/client_reqrep.py", line 899, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/aiohttp/streams.py", line 616, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 456, in wait_for
+    return fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 624, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.10/Frameworks/Python.framework/Versions/3.10/lib/python3.10/asyncio/tasks.py", line 458, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError[0m
+[30;1m2023-02-11 03:47:48[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 04:55:10[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 04:55:15[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 3f2a71a53ca693f3ee4fd048f3775f65).
+[30;1m2023-02-11 06:17:19[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 06:33:25[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 06:40:06[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 06:40:17[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: fef0d91e113b75d4642871467fd4b0c2).
+[30;1m2023-02-11 07:29:43[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 08:49:56[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 8daa2297c1de9168fb1238e3dfd9be7f).
+[30;1m2023-02-11 10:14:31[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 10:14:37[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: b4798390642a008a6e710b0593052d51).
+[30;1m2023-02-11 11:30:29[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 11:45:32[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 11:45:59[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: ef6c61b705df44bfe74aaa27153ce89e).
+[30;1m2023-02-11 11:47:46[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has successfully RESUMED session ef6c61b705df44bfe74aaa27153ce89e.
+[30;1m2023-02-11 12:13:02[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 12:13:08[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: ea06e87c99289d944d3cf20a79ca2d5f).
+[30;1m2023-02-11 13:11:43[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 13:20:48[0m [31mERROR   [0m [35mdiscord.client[0m Attempting a reconnect in 99.76s
+[31mTraceback (most recent call last):
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/client.py", line 627, in connect
+    await self.ws.poll_event()
+  File "/Users/gabrielhall/Documents/Work/landoHub/PlugRemastered/venv/lib/python3.10/site-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000[0m
+[30;1m2023-02-11 13:22:28[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 13:22:33[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 2ac5b086052f65ee5f3cb58010426110).
+[30;1m2023-02-11 14:19:04[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 14:36:38[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 14:52:41[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 16:27:58[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 16:28:03[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 9fa971f299aed4194251c2258b771ca0).
+[30;1m2023-02-11 17:07:39[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None session has been invalidated.
+[30;1m2023-02-11 17:07:44[0m [34;1mINFO    [0m [35mdiscord.gateway[0m Shard ID None has connected to Gateway (Session ID: 03fed64d080e45ea4d33da183cc55676).

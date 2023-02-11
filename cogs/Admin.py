@@ -211,6 +211,13 @@ class Admin(commands.Cog):
     async def stock(self, interaction: discord.Interaction):
         # Log Command
         await self.log(interaction.user, f'{interaction.command.name}')
+        
+        if "ticket" not in interaction.channel.name:
+            # Check if admin is using the command 
+            if interaction.user.guild_permissions.administrator:
+                pass
+            else:
+                return await interaction.response.send_message("You can only use this command in a ticket channel")
         n_accounts = MongoController().get_number_of_available_accounts()
         return await interaction.response.send_message(f"There are **{n_accounts}** accounts in stock")
     
