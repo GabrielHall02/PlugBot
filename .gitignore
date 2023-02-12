@@ -7,3 +7,5 @@
 discord.log
 clients_adapter.py
 adapter.py
+*.csv
+*.txt
