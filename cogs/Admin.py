@@ -28,15 +28,17 @@ class Admin(commands.Cog):
         # Log command
         await self.log(interaction.user, f'{str(interaction.command.name)} {number_of_accounts} {client} {total_price} {payment_method}')
         account_list = [acc['account'] for acc in MongoController().get_n_available_accounts(number_of_accounts)]
+        # Defer
+        await interaction.response.defer()
         if len(account_list) == number_of_accounts:
             # Send accs in string if number_of_accounts is < 20
             if number_of_accounts < 20:
-                await interaction.response.send_message("Here are your accounts: \n" + "```" +  "\n".join(account_list) + "```")
+                await interaction.followup.send("Here are your accounts: \n" + "```" +  "\n".join(account_list) + "```")
             else:
                 # Send accs in file if number_of_accounts is >= 20
                 with open("accounts.txt", "w") as f:
                     f.write("Here are your accounts: \n" + "\n".join(account_list))
-                await interaction.response.send_message(file=discord.File(fp="accounts.txt", filename="accounts.txt"))
+                await interaction.followup.send(file=discord.File(fp="accounts.txt", filename="accounts.txt"))
                 os.remove("accounts.txt")
             # Update accounts in database to status = sold
             for acc in account_list:
@@ -77,7 +79,7 @@ class Admin(commands.Cog):
                 }]
                 MongoController().insert_new_client(client.strip("<@>"), datetime.now(), 0, account_purchases, [], [], 0)
         else:
-            await interaction.response.send_message("Not enough accounts in stock")
+            await interaction.followup.send("Not enough accounts in stock")
             return
     
     @app_commands.checks.has_permissions(administrator=True)
@@ -160,15 +162,15 @@ class Admin(commands.Cog):
     
 
     @app_commands.checks.has_permissions(administrator=True)
-    @app_commands.command(name="export_sold_accounts", description="Export sold accounts")
+    @app_commands.command(name="export_all_accounts", description="Export all accounts")
     async def export_all_accounts(self, interaction: discord.Interaction):
         # Log Command
         await self.log(interaction.user, f'{interaction.command.name}')
         account_list = [acc['account'] for acc in MongoController().get_all_accounts()]
         with open("all_accounts.txt", "w") as f:
             f.write("\n".join(account_list))
-        await interaction.response.send_message(file=discord.File(fp="sold_accounts.txt", filename="sold_accounts.txt"))
-        return os.remove("sold_accounts.txt")
+        await interaction.response.send_message(file=discord.File(fp="all_accounts.txt", filename="all_accounts.txt"))
+        return os.remove("all_accounts.txt")
     
 
     @app_commands.checks.has_permissions(administrator=True)
