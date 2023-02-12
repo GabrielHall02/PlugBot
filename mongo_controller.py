@@ -227,6 +227,17 @@ class MongoController:
     def increment_client_level(self, id, level):
         """Increment the level of a client"""
         self.clients.update_one({"client_id":id}, {"$inc": {"level":level}})
+
+    def get_client_with_most_revenue(self):
+        """Returns the client with the most revenue"""
+        max_revenue = 0
+        max_client = None
+        for client in self.get_all_clients():
+            revenue = self.get_client_revenue(client["client_id"])
+            if revenue > max_revenue:
+                max_revenue = revenue
+                max_client = client
+        return max_client
     
 
     # TICKET METHODS
@@ -302,7 +313,7 @@ class MongoController:
 def main():
 
     test = MongoController()
-    print(test.get_client_revenue("903095247905624105"))
+    print(test.get_client_with_most_revenue())
 
 if __name__ == "__main__":
     main()  
