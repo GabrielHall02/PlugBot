@@ -143,7 +143,9 @@ class Admin(commands.Cog):
             else:
                 # If it does, update it
                 MongoController().update_account_status(account, status)
-        return await interaction.response.send_message("Accounts imported successfully")
+        # Defer
+        await interaction.response.defer()
+        return await interaction.followup.send("Accounts imported successfully")
     
     @app_commands.checks.has_permissions(administrator=True)
     @app_commands.command(name="export_sold_accounts", description="Export sold accounts")
@@ -152,6 +154,18 @@ class Admin(commands.Cog):
         await self.log(interaction.user, f'{interaction.command.name}')
         account_list = [acc['account'] for acc in MongoController().get_all_sold_accounts()]
         with open("sold_accounts.txt", "w") as f:
+            f.write("\n".join(account_list))
+        await interaction.response.send_message(file=discord.File(fp="sold_accounts.txt", filename="sold_accounts.txt"))
+        return os.remove("sold_accounts.txt")
+    
+
+    @app_commands.checks.has_permissions(administrator=True)
+    @app_commands.command(name="export_sold_accounts", description="Export sold accounts")
+    async def export_all_accounts(self, interaction: discord.Interaction):
+        # Log Command
+        await self.log(interaction.user, f'{interaction.command.name}')
+        account_list = [acc['account'] for acc in MongoController().get_all_accounts()]
+        with open("all_accounts.txt", "w") as f:
             f.write("\n".join(account_list))
         await interaction.response.send_message(file=discord.File(fp="sold_accounts.txt", filename="sold_accounts.txt"))
         return os.remove("sold_accounts.txt")
@@ -254,6 +268,11 @@ class Admin(commands.Cog):
         await self.log(interaction.user, f'{interaction.command.name} {step}')
         MongoController().del_account_price(step)
         return await interaction.response.send_message(f"Price for step {step} removed")
+    
+    @app_commands.checks.has_permissions(administrator=True)
+    @app_commands.command(name="client_profile", description="Sends client profile")
+    async def client_profile(self, interaction: discord.Interaction, client: discord.Member):
+        pass
     
 
 async def setup(client:commands.Bot):

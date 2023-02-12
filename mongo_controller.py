@@ -80,6 +80,10 @@ class MongoController:
         self.garbage_accounts.insert_one(self.accounts.find_one({"account":account}))
         self.accounts.delete_one({"account":account})
 
+    def get_all_accounts(self):
+        """Returns all accounts from the database"""
+        return list(self.accounts.find({}))
+
     def get_all_bad_accounts(self):
         """Returns all bad accounts from the database"""
         return self.accounts.find({"status":"bad_account"})
