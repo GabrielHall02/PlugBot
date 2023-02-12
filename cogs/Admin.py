@@ -283,8 +283,25 @@ class Admin(commands.Cog):
     @app_commands.checks.has_permissions(administrator=True)
     @app_commands.command(name="client_profile", description="Sends client profile")
     async def client_profile(self, interaction: discord.Interaction, client: discord.Member):
-        pass
-    
+        # Log Command
+        await self.log(interaction.user, f'{interaction.command.name} {client}')
+        member = await interaction.guild.fetch_member(client.strip("<@>"))
+        total_number_of_accounts_bought = MongoController().get_client_number_of_account_purchases(str(member.id))
+        total_number_replacements = MongoController().get_client_number_of_replacements(str(member.id))
+        revenue = MongoController().get_client_revenue(str(member.id))
+        #TODO: Implement Services
+
+        embed = discord.Embed(title=f"Client Profile", description="", color=0xff9a00)
+        embed.add_field(name="Name", value=f"{member.name}", inline=True)
+        embed.set_thumbnail(url=member.avatar_url)
+        embed.add_field(name="Total number of accounts bought", value=f"{total_number_of_accounts_bought}", inline=True)
+        embed.add_field(name="Total number of replacements", value=f"{total_number_replacements}", inline=True)
+        embed.add_field(name="Revenue", value=f"{revenue}€", inline=True)
+        embed.add_field(name="Average price per account", value=f"{round(revenue/total_number_of_accounts_bought,2)}€", inline=True)
+        embed.add_field(name="Estimate of profit", value=f"{round((revenue/(total_number_of_accounts_bought+total_number_replacements))-1,2)}€", inline=True)
+        embed.set_footer(text=f"Requested by {interaction.user.name} | {datetime.now().strftime('%d/%m/%Y %H:%M:%S')}")
+
+        return await interaction.response.send_message(embed=embed)
 
 async def setup(client:commands.Bot):
     await client.add_cog(Admin(client))

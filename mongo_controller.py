@@ -175,7 +175,10 @@ class MongoController:
     
     def get_client_number_of_account_purchases(self, id):
         """Returns the number of account_purchases of a client from the database"""
-        return len(self.get_client_account_purchases(id))
+        total = 0
+        for purchase in self.get_client_account_purchases(id):
+            total += purchase["Number_of_accounts"]
+        return total
     
     def get_client_number_of_replacements(self, id):
         """Returns the number of replacements of a client from the database"""
@@ -183,15 +186,15 @@ class MongoController:
     
     def get_client_services(self, id):
         """Returns all services of a client from the database"""
-        return self.client.find_one({"client_id":id}, {"_id":0, "services":1})["services"]
+        return self.clients.find_one({"client_id":id}, {"_id":0, "service_purchases":1})["service_purchases"]
     
     def get_client_revenue(self, id):
         """Returns the revenue of a client from the database"""
         revenue = 0
         for purchase in self.get_client_account_purchases(id):
-            revenue += purchase["total_price"]
+            revenue += purchase["Total_price"]
         for service in self.get_client_services(id):
-            revenue += service["total_price"]
+            revenue += service["Total_price"]
         return revenue
     
     def get_client_revenue_per_type(self, id, purchase_type):
@@ -199,10 +202,10 @@ class MongoController:
         revenue = 0
         if purchase_type == "account_purchase":
             for purchase in self.get_client_account_purchases(id):
-                revenue += purchase["total_price"]
+                revenue += purchase["Total_price"]
         elif purchase_type == "service":
             for service in self.get_client_services(id):
-                revenue += service["total_price"]
+                revenue += service["Total_price"]
         return revenue
     
     def get_client_level(self, id):
@@ -299,7 +302,7 @@ class MongoController:
 def main():
 
     test = MongoController()
-    print(test.get_account_prices())
+    print(test.get_client_revenue("903095247905624105"))
 
 if __name__ == "__main__":
     main()  
