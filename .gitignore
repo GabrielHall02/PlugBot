@@ -4,3 +4,6 @@
 /cogs/__pycache__/
 .env
 .DS_Store
+discord.log
+clients_adapter.py
+adapter.py

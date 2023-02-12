@@ -191,14 +191,16 @@ class SelectAddressMenu(discord.ui.Select):
             
             
         else:
+            await interaction.response.defer()
             if self.invoker == None:
-                return await interaction.response.send_message("Select a network", view=SelectNetworkView(BinanceController().get_coin_networks(self.values[0]), self.values[0]))
+                return await interaction.followup.send("Select a network", view=SelectNetworkView(BinanceController().get_coin_networks(self.values[0]), self.values[0]))
             # Get checkout session
             checkout_session = MongoController().get_pending_checkout_session_by_user_id(str(interaction.user.id)) 
             MongoController().set_session_payment_method(checkout_session['_id'], "Crypto")
             MongoController().set_session_coin(checkout_session['_id'], self.values[0])
-            await interaction.response.send_message("Select a network", view=SelectNetworkView(BinanceController().get_coin_networks(self.values[0]), self.values[0], self.invoker))
-            
+
+            await interaction.followup.send("Select a network", view=SelectNetworkView(BinanceController().get_coin_networks(self.values[0]), self.values[0], self.invoker))
+
 
 class SelectNetworkView(discord.ui.View):
     def __init__(self, options, coin, invoker=None):
@@ -213,18 +215,18 @@ class SelectNetworkMenu(discord.ui.Select):
         super().__init__(placeholder="Chose a network", options=options)
     
     async def callback(self, interaction: discord.Interaction):
+        await interaction.response.defer()
         # Get checkout session
         if self.invoker == None:
-            return await interaction.response.send_message(BinanceController().get_deposit_address(self.coin, self.values[0])['address'])
+            return await interaction.followup.send(BinanceController().get_deposit_address(self.coin, self.values[0])['address'])
         checkout_session = MongoController().get_pending_checkout_session_by_user_id(str(interaction.user.id))
         MongoController().set_session_network(checkout_session['_id'], self.values[0])
         # TODO: Add a way to make discounts on crypto payment
-        # TODO: Convert € to crypto amount
         if self.coin == "USDT":
             crypto_price = round(float(checkout_session['total_price'])*float(BinanceController().get_coin_price_EUR("USDT")),2)
         else:
             crypto_price = round(float(checkout_session['total_price'])/float(BinanceController().get_coin_price_EUR(self.coin)),6)
-        return await interaction.response.send_message(f"Please send **{crypto_price} {self.coin}** ({checkout_session['total_price']}€)  to **{BinanceController().get_deposit_address(self.coin, self.values[0])['address']}**")
+        return await interaction.followup.send(f"Please send **{crypto_price} {self.coin}** ({checkout_session['total_price']}€)  to **{BinanceController().get_deposit_address(self.coin, self.values[0])['address']}**")
 
 
 

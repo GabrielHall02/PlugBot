@@ -15,7 +15,6 @@ class BinanceController:
         load_dotenv()
         self.api_key = os.getenv('API_KEY')
         self.api_secret = os.getenv('SECRET_KEY')
-        self.api_key, self.api_secret = self.controller.get_binance_key_pair()
         self.client = Client(self.api_key, self.api_secret)
         self.binance_url = "https://api4.binance.com"
 
@@ -85,6 +84,7 @@ class BinanceController:
 def main():
     binance_controller = BinanceController()
     print(binance_controller.get_deposit_by_txid("USDT", "Internal transfer 128771144816"))
+    print(binance_controller.get_coin_networks("USDT"))
 
 if __name__ == "__main__":
     main()

@@ -1,25 +1,23 @@
 from pymongo import MongoClient
 from datetime import datetime
 from bson.objectid import ObjectId
+from dotenv import load_dotenv
+import os
 
 class MongoController:
     def __init__(self):
-        self.client = MongoClient()
-        self.db = self.client["landohub"]
-        self.constants = self.db["landohub.Constants"]
-        self.addresses = self.db["landohub.Addresses"]
-        self.finance = self.db["landohub.Finance"]
-        self.binance = self.db["landohub.Binance"]
-        self.tickets = self.db["landohub.Tickets"]
-        self.clients = self.db["landohub.Clients"]
-        self.prices = self.db["landohub.Prices"]
-        self.accounts = self.db["landohub.Accounts"] 
-        self.garbage_accounts = self.db["landohub.GarbageAccounts"]
-        self.checkout_sessions = self.db["landohub.CheckoutSessions"]
-    
-    def get_token(self):
-        """Returns the discord bot token from the database"""
-        return self.constants.find_one({}, {"token":1})["token"]
+        load_dotenv()
+        mongo_url = os.getenv('MONGO_URL')
+        self.client = MongoClient(mongo_url)
+        self.db = self.client["Landohub"]
+        self.addresses = self.db["Addresses"]
+        self.finance = self.db["Finance"]
+        self.tickets = self.db["Tickets"]
+        self.clients = self.db["Clients"]
+        self.prices = self.db["Prices"]
+        self.accounts = self.db["Accounts"] 
+        self.garbage_accounts = self.db["GarbageAccounts"]
+        self.checkout_sessions = self.db["CheckoutSessions"]
     
     def get_revolut_address(self):
         """Returns the revolut address from the database"""
@@ -28,12 +26,6 @@ class MongoController:
     def get_binance_payid_address(self):
         """Returns the binance payID address from the database"""
         return self.addresses.find_one({'key': 'binancePayId'})['address']
-    
-    def get_binance_key_pair(self):
-        """Returns the Binance API key pair from the database"""
-        api_key = self.binance.find()[0]["api_key"]
-        api_secret = self.binance.find()[1]["secret_key"]
-        return api_key, api_secret
     
     # ACCOUNT METHODS
     
