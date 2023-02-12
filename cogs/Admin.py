@@ -134,6 +134,7 @@ class Admin(commands.Cog):
     async def import_accounts(self, interaction: discord.Interaction, status: str, file: discord.Attachment):
         # Log Command
         await self.log(interaction.user, f'{interaction.command.name} {status} {file.filename}')
+        await interaction.response.defer()
         f = await file.read()
         # Convert bytes to string
         f = f.decode("utf-8").split('\n')
@@ -145,8 +146,6 @@ class Admin(commands.Cog):
             else:
                 # If it does, update it
                 MongoController().update_account_status(account, status)
-        # Defer
-        await interaction.response.defer()
         return await interaction.followup.send("Accounts imported successfully")
     
     @app_commands.checks.has_permissions(administrator=True)
