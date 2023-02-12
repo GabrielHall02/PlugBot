@@ -292,7 +292,7 @@ class Admin(commands.Cog):
 
         embed = discord.Embed(title=f"Client Profile", description="", color=0xff9a00)
         embed.add_field(name="Name", value=f"{member.name}", inline=True)
-        embed.set_thumbnail(url=member.avatar_url)
+        embed.set_thumbnail(url=member.avatar)
         embed.add_field(name="Total number of accounts bought", value=f"{total_number_of_accounts_bought}", inline=True)
         embed.add_field(name="Total number of replacements", value=f"{total_number_replacements}", inline=True)
         embed.add_field(name="Revenue", value=f"{revenue}€", inline=True)
