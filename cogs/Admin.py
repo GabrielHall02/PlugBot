@@ -282,10 +282,9 @@ class Admin(commands.Cog):
     
     @app_commands.checks.has_permissions(administrator=True)
     @app_commands.command(name="client_profile", description="Sends client profile")
-    async def client_profile(self, interaction: discord.Interaction, client: discord.Member):
+    async def client_profile(self, interaction: discord.Interaction, member: discord.Member):
         # Log Command
-        await self.log(interaction.user, f'{interaction.command.name} {client}')
-        member = await interaction.guild.fetch_member(client.strip("<@>"))
+        await self.log(interaction.user, f'{interaction.command.name} {member.name}')
         total_number_of_accounts_bought = MongoController().get_client_number_of_account_purchases(str(member.id))
         total_number_replacements = MongoController().get_client_number_of_replacements(str(member.id))
         revenue = MongoController().get_client_revenue(str(member.id))
