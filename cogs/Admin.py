@@ -30,6 +30,7 @@ class Admin(commands.Cog):
         account_list = [acc['account'] for acc in MongoController().get_n_available_accounts(number_of_accounts)]
         # Defer
         await interaction.response.defer()
+        
         if len(account_list) == number_of_accounts:
             # Send accs in string if number_of_accounts is < 20
             if number_of_accounts < 20:
@@ -78,6 +79,15 @@ class Admin(commands.Cog):
                     "Account_list": account_list
                 }]
                 MongoController().insert_new_client(client.strip("<@>"), datetime.now(), 0, account_purchases, [], [], 0)
+
+                # Add Client role if not already added
+                # Get member from client ID
+                member = await interaction.guild.fetch_member(client.strip("<@>"))
+                # Get role
+                role = discord.utils.get(interaction.guild.roles, name="Client")
+                # Add role
+                await member.add_roles(role)
+
         else:
             await interaction.followup.send("Not enough accounts in stock")
             return

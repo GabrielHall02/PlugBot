@@ -44,7 +44,7 @@ class TicketMenu(discord.ui.View):
             ticket_channel = await interaction.guild.create_text_channel("ticket-{}".format(interaction.user.name))
             # Set permissions
             await ticket_channel.set_permissions(interaction.guild.get_role(interaction.guild.id), send_messages=False, read_messages=False)
-            await ticket_channel.set_permissions(interaction.user, send_messages=True, read_messages=True, read_message_history=True)
+            await ticket_channel.set_permissions(interaction.user, send_messages=True, read_messages=True, read_message_history=True, attach_files=True, embed_links=True, add_reactions=True)
             await ticket_channel.send("Welcome <@"+str(interaction.user.id)+">")
             embed = discord.Embed(title="Hello, how can I help you?",description="For further support, please ping a Moderator",color = discord.Colour.orange())
             embed.add_field(name='• `/buy <number_of_accounts>`', value='Use this command to create a checkout session.\nYou will be promped to choose a payment gateway.\nAfter choosing a payment method you will be asked to pay a certain amount for your accounts.\nYou will be able to **autocheckout** if you choose to pay with **USDT**.', inline=False)
