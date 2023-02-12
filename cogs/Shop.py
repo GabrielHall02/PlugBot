@@ -61,7 +61,7 @@ class Shop(commands.Cog):
                     if datetime.fromtimestamp(int(BinanceController().get_deposit_by_txid("USDT", txid)['insertTime'])/1000) >= checkout_session['createdAt']:
                         # Send n_accounts
                         # Send accs in string if number_of_accounts is < 20
-                        number_of_accounts = checkout_session['number_of_accounts']
+                        number_of_accounts = checkout_session['n_accounts']
                         client = checkout_session['user_id']
                         payment_method = checkout_session['coin']
                         total_price = checkout_session['total_price']
@@ -73,7 +73,7 @@ class Shop(commands.Cog):
                         else:
                             # Send accs in file if number_of_accounts is >= 20
                             with open("accounts.txt", "w") as f:
-                                f.write("Here are your accounts: \n" + "\n".join(account_list))
+                                f.write("\n".join(account_list))
                             await interaction.response.send_message(file=discord.File(fp="accounts.txt", filename="accounts.txt"))
                             os.remove("accounts.txt")
                         # Update accounts in database to status = sold
