@@ -181,6 +181,17 @@ class Admin(commands.Cog):
         await interaction.response.send_message(file=discord.File(fp="all_accounts.txt", filename="all_accounts.txt"))
         return os.remove("all_accounts.txt")
     
+    @app_commands.checks.has_permissions(administrator=True)
+    @app_commands.command(name="export_cartable_accounts", description="Export cartable accounts")
+    async def export_cartable_accounts(self, interaction: discord.Interaction):
+        # Log Command
+        await self.log(interaction.user, f'{interaction.command.name}')
+        account_list = [acc['account'] for acc in MongoController().get_all_cartable_accounts()]
+        with open("cartable_accounts.txt", "w") as f:
+            f.write("\n".join(account_list))
+        await interaction.response.send_message(file=discord.File(fp="cartable_accounts.txt", filename="cartable_accounts.txt"))
+        return os.remove("cartable_accounts.txt")
+    
 
     @app_commands.checks.has_permissions(administrator=True)
     @app_commands.command(name="finance", description="Shows finance results")

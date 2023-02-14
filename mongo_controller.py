@@ -96,6 +96,10 @@ class MongoController:
         """Returns all uncartable accounts from the database"""
         return self.accounts.find({"status":"uncartable"})
     
+    def get_all_cartable_accounts(self):
+        """Returns all cartable accounts from the database"""
+        return self.accounts.find({"status":"cartable"})
+    
     def insertOne_cartable_account(self, account):
         """Inserts a list of accounts into the database"""
         self.accounts.insert_one({"account":account, "status":"cartable"})
