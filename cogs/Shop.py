@@ -61,6 +61,7 @@ class Shop(commands.Cog):
                     if datetime.fromtimestamp(int(BinanceController().get_deposit_by_txid("USDT", txid)['insertTime'])/1000) >= checkout_session['createdAt']:
                         # Send n_accounts
                         # Send accs in string if number_of_accounts is < 20
+                        MongoController().set_session_txid(str(interaction.user.id), txid)
                         number_of_accounts = checkout_session['n_accounts']
                         client = checkout_session['user_id']
                         payment_method = checkout_session['coin']
