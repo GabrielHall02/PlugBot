@@ -150,9 +150,9 @@ class Admin(commands.Cog):
         f = f.decode("utf-8").split('\n')
         for account in f:
             # Check if account already exists
-            if MongoController().get_account(account) is None and status.lower() == "cartable":
+            if MongoController().get_account(account) is None:
                 # If not, insert it
-                MongoController().insertOne_cartable_account(account)
+                MongoController().insertOne_account(account, status)
             else:
                 # If it does, update it
                 MongoController().update_account_status(account, status)
@@ -180,6 +180,7 @@ class Admin(commands.Cog):
             f.write("\n".join(account_list))
         await interaction.response.send_message(file=discord.File(fp="all_accounts.txt", filename="all_accounts.txt"))
         return os.remove("all_accounts.txt")
+    
     
     @app_commands.checks.has_permissions(administrator=True)
     @app_commands.command(name="export_cartable_accounts", description="Export cartable accounts")

@@ -104,6 +104,10 @@ class MongoController:
         """Inserts a list of accounts into the database"""
         self.accounts.insert_one({"account":account, "status":"cartable"})
 
+    def insertOne_account(self, account, status):
+        """Inserts a list of accounts into the database"""
+        self.accounts.insert_one({"account":account, "status":status})
+
     # FINANCE METHODS
 
     def insert_finance_statement(self, statement):

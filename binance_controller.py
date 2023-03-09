@@ -83,8 +83,8 @@ class BinanceController:
 
 def main():
     binance_controller = BinanceController()
-    print(binance_controller.get_deposit_by_txid("USDT", "Internal transfer 128771144816"))
-    print(binance_controller.get_coin_networks("USDT"))
+    print(binance_controller.get_deposit_history("USDT"))
+
 
 if __name__ == "__main__":
     main()
